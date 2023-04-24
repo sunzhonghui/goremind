@@ -6,17 +6,16 @@ import (
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
-	"github.com/flopp/go-findfont"
 	"github.com/gen2brain/beeep"
 	"goremind/res"
-	"os"
+	"goremind/theme"
 	"strconv"
-	"strings"
 	"time"
 )
 
 func main() {
 	a := app.NewWithID("com.idmiss.timer")
+	a.Settings().SetTheme(theme.MyTheme{})
 	w := a.NewWindow("我的提醒")
 	w.Resize(fyne.NewSize(400, 200))
 
@@ -50,14 +49,7 @@ func main() {
 	w.ShowAndRun()
 }
 func init() {
-	//设置中文字体
-	fontPaths := findfont.List()
-	for _, path := range fontPaths {
-		if strings.Contains(path, "msyh.ttf") || strings.Contains(path, "simhei.ttf") || strings.Contains(path, "simsun.ttc") || strings.Contains(path, "simkai.ttf") {
-			os.Setenv("FYNE_FONT", path)
-			break
-		}
-	}
+
 }
 func sendNotification(title, message string, w fyne.Window) {
 	w.Show()
