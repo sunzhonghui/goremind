@@ -34,7 +34,7 @@ func main() {
 			return
 		}
 
-		duration := time.Duration(minutes) * time.Second
+		duration := time.Duration(minutes) * time.Minute
 		w.Hide()
 		time.AfterFunc(duration, func() {
 			sendNotification("时间到了！", fmt.Sprintf("你设定的 %d 分钟已经到了！该去%s了", minutes, txentry.Text), w)
