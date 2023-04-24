@@ -30,7 +30,7 @@ func main() {
 
 		minutes, err := strconv.Atoi(entry.Text)
 		if err != nil {
-			fmt.Println("无效的输入")
+			showDialog(w, "请输入正确的分钟数")
 			return
 		}
 
