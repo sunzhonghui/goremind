@@ -17,7 +17,7 @@ import (
 
 func main() {
 	a := app.NewWithID("com.idmiss.timer")
-	w := a.NewWindow("KLL的提醒")
+	w := a.NewWindow("我的提醒")
 	w.Resize(fyne.NewSize(400, 200))
 
 	txentry := widget.NewEntry()
