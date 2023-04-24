@@ -1,0 +1,10 @@
+# Make sure to check the documentation at http://goreleaser.com
+project_name: goremind
+builds:
+  - main: ./main.go
+    goos:
+      - darwin
+      - windows
+    goarch:
+      - arm64
+      - amd64
