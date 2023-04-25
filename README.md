@@ -13,5 +13,7 @@ windows , mac 提醒程序
 
 ```
 fyne package -os windows -icon idmisstx.png
+
+fyne package -os darwin -icon idmisstx.png
 ```
 
